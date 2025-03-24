@@ -125,7 +125,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         tag_name: OpenWrt_${{ github.run_number }}
-        files: openwrt/bin/targets/*/*/*.img.xz
+        files: openwrt/bin/targets/*/*/*.tar.gz
         body: |
           首次使用建议全新刷写
           * 基本信息

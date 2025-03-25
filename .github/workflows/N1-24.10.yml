@@ -113,7 +113,6 @@ jobs:
       with:
         tag_name: OpenWrt_${{ env.PACKAGED_OUTPUTDATE }}
         files: ${{ env.PACKAGED_OUTPUTPATH }}/*.img.xz
-                openwrt/bin/targets/*/*/*.tar.gz
         body: |
           首次使用建议全新刷写
           * 基本信息

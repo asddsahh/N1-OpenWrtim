@@ -96,7 +96,7 @@ jobs:
       env:
         OPENWRT_ARMVIRT: openwrt/bin/targets/*/*/*.tar.gz
         KERNEL_REPO_URL: breakingbadboy/OpenWrt
-        KERNEL_VERSION_NAME: 6.6.80
+        KERNEL_VERSION_NAME: 6.6.y
         PACKAGE_SOC: diy
         GZIP_IMGS: .xz
         SCRIPT_DIY_PATH: N1/mk_s905d_n1.sh
@@ -112,6 +112,7 @@ jobs:
       with:
         tag_name: OpenWrt_${{ env.PACKAGED_OUTPUTDATE }}
         files: ${{ env.PACKAGED_OUTPUTPATH }}/*.img.xz
+                openwrt/bin/targets/*/*/*.tar.gz
         body: |
           首次使用建议全新刷写
           * 基本信息
